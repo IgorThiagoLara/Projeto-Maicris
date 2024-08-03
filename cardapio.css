@@ -1,1 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(94, 94, 94);
+}
 
+button {
+    padding: 10px;
+    text-align: left;
+    margin: 20px 0 0 0;
+    background-color: black;
+    color: white;
+}
+
+.botão_home i {
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+header h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 70px;
+}
+
+div h1 {
+    text-align: center;
+    color: white;
+    margin: 30px 0 30px 0;
+    font-size: 35px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    text-align: center;
+}
+
+.produtos div {
+    margin-bottom: 20px;
+}
+
+.produtos img{
+    width: 500px;
+    height: 450px;
+}
+
+.produtos_cardapio p{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
