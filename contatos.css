@@ -11,3 +11,30 @@ header h1 {
     color: white;
     font-size: 70px;
 }
+
+iframe {
+    width: 30%;
+    height: 300px;
+    border: 0;
+    margin-top: 20px;
+    margin-left: 50%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+
+}
+
+ul {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.div maps {
+    display: flex;
+    justify-content: center;
+    
+}
