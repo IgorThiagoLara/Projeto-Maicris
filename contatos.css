@@ -1,6 +1,9 @@
 * {
     margin: 0px;
     padding: 0px;
+}
+
+body {
     background-color: rgb(94, 94, 94);
 }
 
@@ -50,5 +53,12 @@ ul {
 .maps {
     display: flex;
     justify-content: center;
+    margin: 30px;
 }
 
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
