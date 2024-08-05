@@ -4,6 +4,23 @@
     background-color: rgb(94, 94, 94);
 }
 
+button {
+    padding: 10px;
+    text-align: left;
+    margin: 20px 0 0 0;
+    background-color: black;
+    color: white;
+}
+
+.botão_home i {
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
 header h1 {
     text-align: center;
     padding: 20px;
@@ -13,13 +30,9 @@ header h1 {
 }
 
 iframe {
-    width: 30%;
-    height: 300px;
-    border: 0;
     margin-top: 20px;
-    margin-left: 50%;
-    border-radius: 8px;
     text-align: center;
+    
 }
 
 h1 {
@@ -31,11 +44,10 @@ h1 {
 ul {
     font-size: 30px;
     margin-top: 10px;
-    text-align: center;
 }
 
-.div maps {
+.maps {
     display: flex;
     justify-content: center;
-    
 }
+
