@@ -56,3 +56,25 @@ div h1 {
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+
+@media (max-width: 1550px) {
+    .produtos img {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos img {
+        width: 100%; 
+        height: auto;
+    }
+}
