@@ -1,7 +1,27 @@
 * {
     margin: 0px;
     padding: 0px;
+}
+
+body {
     background-color: rgb(94, 94, 94);
+}
+
+button {
+    padding: 10px;
+    text-align: left;
+    margin: 20px 0 0 0;
+    background-color: black;
+    color: white;
+}
+
+.botão_home i {
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
 }
 
 header h1 {
@@ -12,9 +32,53 @@ header h1 {
     font-size: 70px;
 }
 
-.produtos_bebidas img{
-    width: 400px;
-    height: 350px;
-    border-radius: 20px;
+div h1 {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    margin: 30px 0 30px 0;
 }
- 
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    text-align: center;
+}
+
+.produtos_sobremesas {
+    margin-bottom: 20px;
+}
+
+.produtos img{
+    width: 500px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.produtos_sobremesas p{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+@media (max-width: 1550px) {
+    .produtos img {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos img {
+        width: 100%; 
+        height: auto;
+    }
+}
