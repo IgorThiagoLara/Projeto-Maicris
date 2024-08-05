@@ -49,9 +49,9 @@ div h1 {
     margin-bottom: 20px;
 }
 
-.produtos_bebidas img{
-    width: 400px;
-    height: 350px;
+.produtos img{
+    width: 500px;
+    height: 450px;
     border-radius: 10px;
 }
 
@@ -70,14 +70,14 @@ footer {
 }
 
 @media (max-width: 1550px) {
-    .produtos_bebidas img {
+    .produtos img {
         width: 400px;
         height: 350px;
     }
 }
 
 @media (max-width: 768px) {
-    .produtos_bebidas img {
+    .produtos img {
         width: 100%; 
         height: auto;
     }
