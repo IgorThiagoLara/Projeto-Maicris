@@ -47,8 +47,9 @@ div h1 {
 }
 
 .produtos_bebidas img{
-    width: 500px;
-    height: 450px;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
 }
 
 .produtos_bebidas p{
