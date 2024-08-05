@@ -57,6 +57,29 @@ div h1 {
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 img{
     border-radius: 10px;
+=======
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+
+@media (max-width: 1550px) {
+    .produtos img {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos img {
+        width: 100%; 
+        height: auto;
+    }
+>>>>>>> 736bb4bee64c2f5ed8e4a6c812e3f035792ff46c
 }

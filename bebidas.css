@@ -1,6 +1,9 @@
 * {
     margin: 0px;
     padding: 0px;
+}
+
+body {
     background-color: rgb(94, 94, 94);
 }
 
@@ -57,4 +60,25 @@ div h1 {
     font-size: 20px;
     margin-bottom: 10px;
 
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+@media (max-width: 1550px) {
+    .produtos_bebidas img {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos_bebidas img {
+        width: 100%; 
+        height: auto;
+    }
 }
