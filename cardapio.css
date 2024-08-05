@@ -1,6 +1,10 @@
 * {
     margin: 0px;
     padding: 0px;
+    
+}
+
+body {
     background-color: rgb(94, 94, 94);
 }
 
@@ -47,9 +51,11 @@ div h1 {
 }
 
 .produtos img{
-    width: 450px;
-    height: 300px;
+    width: 500px;
+    height: 450px;
+    border-radius: 10px;
 }
+
 
 .produtos_cardapio p{
     color: white;
@@ -57,10 +63,6 @@ div h1 {
     margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-img{
-    border-radius: 10px;
-=======
 footer {
     text-align: center;
     color: white;
@@ -81,5 +83,4 @@ footer {
         width: 100%; 
         height: auto;
     }
->>>>>>> 736bb4bee64c2f5ed8e4a6c812e3f035792ff46c
 }
