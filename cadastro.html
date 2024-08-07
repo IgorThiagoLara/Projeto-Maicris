@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envie sua Mensagem</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <h1>Restaurante Freygang</h1>
+    <br>
+    <div>
+        <label for="" class="nomes">nome</label>
+    <input type="text" placeholder="Digite seu nome..." class="nome">
+    <br>
+    <label for="" class="sobrenome">Sobrenome</label>
+    <input type="text"id="sobrenome" placeholder="Digite seu sobrenome..." class="sobrenome">
+    <br>
+    <form action="/enviar_pedido" method="POST">
+        <input type="radio" id="opcao1" name="item" value="Masculino" class="genero">
+        <label for="opcao1">Masculino</label><br>
+        <input type="radio" id="opcao2" name="item" value="Feminino" class="genero">
+        <label for="opcao2">Feminino</label><br>
+
+
+        <br>
+        
+
+        <label for="">Email</label>
+        <input type="text" nome="email" placeholder="Digite o seu email..." class="email">
+        <br>
+        <label for="">Telefone</label>
+        <input type="number" placeholder="Número de Telefone" class="numero">
+        <br>
+        <form action="#" method="post">
+            <label for="opcao">Selecione uma opção:</label>
+            <select name="opcao" id="opcao" class="opcao">
+                <option value="reclamacao">Reclamação</option>
+                <option value="sugestao">Sugestão</option>
+        </select>
+     <br>
+
+
+
+        <input type="submit" value="Enviar Mensagem" class="enviar">
+        <input type="reset" value="Limpar" class="limpar">
+    </div>
+    
+    </form>
+</body>
+</html>
