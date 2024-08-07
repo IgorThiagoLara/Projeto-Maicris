@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(94, 94, 94);
+}
+
+header h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 70px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    margin-top: 100%;
+}
+
+.produto img {
+    width: 200px;
+    height: 200px;
+}
