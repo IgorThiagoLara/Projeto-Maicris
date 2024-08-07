@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +28,7 @@ img {
 .imagens {
     text-align: center;
     position: relative; 
-    margin: 20px; 
+
 }
 
 .btn1 {
@@ -83,4 +84,5 @@ footer {
     color: white;
     background-color: black;
     padding: 20px;
+    
 }
