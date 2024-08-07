@@ -84,9 +84,10 @@ footer {
     background-color: transparent;
     text-decoration: none;
     overflow: hidden;
-margin: 10px 0 0 0;
-    font-family: inherit;
+    margin: 10px 0 0 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: black,;
+
    }
    
    .btn::before {

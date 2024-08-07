@@ -8,48 +8,71 @@
 </head>
 <body>
     <h1>Restaurante Freygang</h1>
-    <br>
-    
-    <div class="login">
-        <label for="" class="nomes">nome</label>
-    <input type="text" placeholder="Digite seu nome..." class="nome">
-    <br>
-    <label for="" class="sobrenome">Sobrenome</label>
-    <input type="text"id="sobrenome" placeholder="Digite seu sobrenome..." class="sobrenome">
-    <br>
-    <form action="/enviar_pedido" method="POST">
-        <input type="radio" id="opcao1" name="item" value="Masculino" class="genero">
-        <label for="opcao1">Masculino</label><br>
-        <input type="radio" id="opcao2" name="item" value="Feminino" class="genero">
-        <label for="opcao2">Feminino</label><br>
+<br>
+<div id="conteudo">
+        <h2>Envie sua Mensagem</h1>
 
+    <form class="formulario" method="post">
+        <div class="login">
+            <label for="" class="nomes">Nome</label>
+<br>
+        <input type="text" placeholder="Digite seu nome..." class="nome">
+<br>
+<br>
 
-        <br>
-        
-
+        <label for="" class="sobrenome">Sobrenome</label>
+<br>
+        <input type="text"id="sobrenome" placeholder="Digite seu sobrenome..." class="sobrenome">
+<br>
+<br>
         <label for="">Email</label>
-        <input type="text" nome="email" placeholder="Digite o seu email..." class="email">
-        <br>
+<br>
+        <input type="email" nome="email" placeholder="Digite o seu email..." class="email">
+<br>
+<br>
         <label for="">Telefone</label>
-        <input type="number" placeholder="Número de Telefone" class="numero">
-        <br>
-        <form action="#" method="post">
-            <label for="opcao">Selecione uma opção:</label>
-            <select name="opcao" id="opcao" class="opcao">
-                <option value="reclamacao">Reclamação</option>
-                <option value="sugestao">Sugestão</option>
-        </select>
-     <br>
+<br>
+        <input type="number" placeholder="Digite seu Número de Telefone..." class="numero">
+<br>
+<br>
+        <label for="">Qual é a sua identidade de gênero?</label>
+
+<br>
+            <input type="radio" id="opcao1" name="item" value="Masculino" class="genero">
+            <label for="opcao1">Masculino</label><br>
+            <input type="radio" id="opcao2" name="item" value="Feminino" class="genero">
+            <label for="opcao2">Feminino</label><br>
+
+
+<br>
+            
+
+       
+<br>
+
+
+                <label for="opcao">Selecione uma opção:</label>
+<br>
+                <select name="opcao" id="opcao" class="opcao">
+                    <option value="obs"></option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="sugestao">Sugestão</option>
+            </select>
+<br>
+            <input type="text" id="msg" class="caixa">
+<br>
 
 
 
-        <input type="submit" value="Enviar Mensagem" class="enviar">
-        <input type="reset" value="Limpar" class="limpar">
-        <br>
-        <a href="index.html">Voltar para Página Inicial</a>
-    </div>
-    
+            <input type="submit" value="Enviar Mensagem" class="enviar">
+            <input type="reset" value="Limpar" class="limpar">
+<br>
+<br>
+            <a href="index.html">Voltar para Página Inicial</a>
+        </div>
     </form>
+</div>
+    
     <footer>
         <p>&copy; Todos os direitos reservados aos alunos: Igor, Marcel, Samuel e Augusto</p>
     </footer>
