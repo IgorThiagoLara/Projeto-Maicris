@@ -10,26 +10,160 @@
     <header>
         <h1>Restaurante Freygang</h1>
     </header>
-    <h1></h1>
-    <form action="">
-        <label >Digite seu email</label>
-        <input type="email" name="" id="">
 
-        <p>Em qual ano você está?</p>
-        <select name="" id="">
-            <option value="">2022</option>
-            <option value="">2023</option>
-            <option value="">2024</option>
-        </select>
-        <div class="produto">
-            <img src="./imagens/Imagens bebidas/cerveja.jpg" alt="">
-            <label for="">Cerveja</label>
-            <input type="checkbox" name="" id="">
-            
-        </div>
+    <section class="conteudo">
+        <h1>Formulário de pedido</h1>  
+        <form action="">
+            <div class="formulario">
+                <label >Digite seu email</label>
+                <input type="email" name="" id="txtEmail" class="email" placeholder="Digite seu email...">
 
+                <label for="">Nome:</label>
+                <input type="text" name="" class="nome" placeholder="Digite seu nome...">
+                <label for="">Telefone</label>
+                <input type="number" name="" class="telefone" placeholder="Digite seu telefone...">
 
-    </form>
+            </div>
+
+            <h4>Opções de pedidos</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Apfelpuree.jpg" alt="">
+                    <div>
+                        <label for="">Apfelpuree</label>
+                        <input type="checkbox" name="torta" id="">
+                    </div>
+                </div>  
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Bockwurst.jpg" alt="">
+                    <div>
+                        <label for="">Bockwurst</label>
+                        <input type="checkbox" name="salsichaClara" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Bratwurst.jpg" alt="">
+                    <div>
+                        <label for="">Bratwurst</label>
+                        <input type="checkbox" name="salsicha" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Eisbein.jpg" alt="">
+                    <div>
+                        <label for="">Eisbein</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Heringsbrot.jpg" alt="">
+                    <div>
+                        <label for="">Heringsbrot</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Kassler.jpg" alt="">
+                    <div>
+                        <label for="">Kassler</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/marreco-recheado.jpg" alt="">
+                    <div>
+                        <label for="">Knäkente</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Sauerkraut.jpg" alt="">
+                    <div>
+                        <label for="">Sauerkraut</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens comidas/Schweinshaxe.jpg" alt="">
+                    <div>
+                        <label for="">Schweinshaxe</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens sobremesas/Cuca de chocolate.jpg" alt="">
+                    <div>
+                        <label for="">Cuca de chocolate</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens sobremesas/Lebkuchen.jpg" alt="">
+                    <div>
+                        <label for="">Lebkuchen</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/imagens sobremesas/Strudel.jpg" alt="">
+                    <div>
+                        <label for="">Strudel</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/Imagens bebidas/agua_mineral.avif" alt="">
+                    <div>
+                        <label for="">Água mineral</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/Imagens bebidas/Coca cola.jpg" alt="">
+                    <div>
+                        <label for="">Refrigerantes</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/Imagens bebidas/Suco de laranja.jpg" alt="">
+                    <div>
+                        <label for="">Sucos naturais</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/Imagens bebidas/cerveja.jpg" alt="">
+                    <div>
+                        <label for="">Cerveja alemã</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/Imagens bebidas/Chopp.jpg" alt="">
+                    <div>
+                        <label for="">Chopp alemão</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/Imagens bebidas/Steinhaeger.jpeg" alt="">
+                    <div>
+                        <label for="">Steinhaeger</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="botoes_finais">
+                <input type="submit" value="Enviar" class="enviar">
+                <input type="reset" value="Limpar formulário" class="limpar">
+            </div>
+            <div class="botao_voltar">
+                <a href="index.html">Voltar para a página inicial</a>
+            </div>
+        </form>
+    </section>
 </body>
 
 <footer>
