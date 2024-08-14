@@ -30,7 +30,8 @@ header h1 {
     padding: 20px;
     background-color: black;
     color: white;
-    font-size: 70px;
+    font-size: 70px;    
+    font-weight: 200;
 }
 
 div h1 {
