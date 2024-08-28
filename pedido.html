@@ -16,14 +16,14 @@
         <form action="">
             <div class="formulario">
                 <label for="">Nome</label>
-                <input type="text" name="" class="nome" placeholder="Digite seu nome...">
+                <input type="text" name="" class="nome" id="txtName" placeholder="Digite seu nome...">
 
                 <label >Email</label>
-                <input type="email" name="" id="txtEmail" class="email" placeholder="Digite seu email...">
+                <input type="email" name="" class="email" id="txtEmail" placeholder="Digite seu email...">
 
              
                 <label for="">Telefone</label>
-                <input type="number" name="" class="telefone" placeholder="Digite seu telefone...">
+                <input type="number" name="" class="telefone" id="txtTel" placeholder="Digite seu telefone...">
 
             </div>
 
@@ -158,8 +158,8 @@
             </div>
 
             <div class="botoes_finais">
-                <input type="submit" value="Enviar" class="enviar">
-                <input type="reset" value="Limpar formulário" class="limpar">
+                <input type="button"value="Enviar" class="enviar" onclick="btnSendClick()">
+                <input type="reset" value="limpar formulario" class="limpar">
             </div>
             <div class="botao_voltar">
                 <a href="index.html">Voltar para a página inicial</a>
@@ -169,6 +169,45 @@
 </body>
 
 <footer>
-    <p>&copy; Todos os direitos reservados aos alunos: Igor, Marcel, Samuel e Augusto</p>
+    <p>&copy; Todos os direitos reservados aos alunos: Igor, Marcel, Samuel, Augusto e Gabriel</p>
 </footer>
+
+<script>
+    const txtName = document.getElementById('txtName')
+    const txtTel = document.getElementById('txtTel')
+    const txtEmail = document.getElementById('txtEmail')
+
+    function btnSendClick() {
+
+        if (!isEmail(txtEmail.value)){
+            alert('Email Inválido')
+            txtEmail.value = ""
+            txtEmail.focus()
+        }
+
+        else if (!isTelephone(txtTel.value)){
+            alert('Seu Telefone deve ser no seguinte formato: (11) 91234-5678')
+            txtTel.value = ""
+            txtTel.focus()
+        }
+    }
+    
+   
+
+    function isNumber(number) {
+        const re = /^\d+$/
+        return re.test(number)
+    }
+
+    function isTelephone(telefone) {
+        const re = /^\(\d{2}\)\d{5}-\d{4}$/
+    
+    }
+
+    fun(telefone)ction isEmail(text){
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(text);
+    }
+</script>
+
 </html>

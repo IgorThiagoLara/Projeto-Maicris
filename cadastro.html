@@ -8,86 +8,129 @@
 </head>
 <body>
     <h1>Restaurante Freygang</h1>
-<br>
-<div id="conteudo">
-        <h2>Envie sua Mensagem</h1>
+    <br>
+    <div id="conteudo">
+        <h2>Envie sua Mensagem</h2>
 
-    <form class="formulario" method="post">
-        <div class="login">
-            <label for="" class="nomes">Nome</label>
-<br>
-        <input type="text" placeholder="Digite seu nome..." class="nome" id="txtname">
-<br>
-<br>
+        <form class="formulario" method="post">
+            <div class="login">
+                <label for="" class="nomes">Nome</label>
+                <br>
+                <input type="text" placeholder="Digite seu nome..." class="nome" id="txtname">
+                <br>
+                <br>
 
-        <label for="" class="sobrenome">Sobrenome</label>
-<br>
-        <input type="text" id="txtSobre" placeholder="Digite seu sobrenome..." class="sobrenome">
-<br>
-<br>
-        <label for="">Email</label>
-<br>
-        <input type="email" id="txtEmail" placeholder="Digite o seu email..." class="email">
-<br>
-<br>
-        <label for="">Telefone</label>
-<br>
-        <input type="number" id="txtNumber" placeholder="Digite seu Número de Telefone..." class="numero">
-<br>
-<br>
-        <label for="">Qual é a sua identidade de gênero?</label>
-
-<br>
-            <input type="radio" id="opcao1" name="item" value="Masculino" class="genero">
-            <label for="opcao1">Masculino</label><br>
-            <input type="radio" id="opcao2" name="item" value="Feminino" class="genero">
-            <label for="opcao2">Feminino</label><br>
-
-
-<br>
-            
-
-       
-<br>
-
-
+                <label for="" class="sobrenome">Sobrenome</label>
+                <br>
+                <input type="text" id="txtSobre" placeholder="Digite seu sobrenome..." class="sobrenome">
+                <br>
+                <br>
+                <label for="">Email</label>
+                <br>
+                <input type="email" id="txtEmail" placeholder="Digite o seu email..." class="email">
+                <br>
+                <br>
+                <label for="">Telefone</label>
+                <br>
+                <input type="text" id="txtNumber" placeholder="Digite seu Número de Telefone..." class="numero" oninput="formatPhoneNumber()">
+                <br>
+                <br>
+                <label for="">Qual é a sua identidade de gênero?</label>
+                <br>
+                <input type="radio" id="opcao1" name="item" value="Masculino" class="genero">
+                <label for="opcao1">Masculino</label><br>
+                <input type="radio" id="opcao2" name="item" value="Feminino" class="genero">
+                <label for="opcao2">Feminino</label><br>
+                <br>
                 <label for="opcao">Selecione uma opção:</label>
-<br>
+                <br>
                 <select name="opcao" id="opcao" class="opcao">
                     <option value="obs"></option>
                     <option value="reclamacao">Reclamação</option>
                     <option value="sugestao">Sugestão</option>
-            </select>
-<br>
-            <input type="text" id="txtMsg" class="caixa">
-<br>
+                </select>
+                <br>
+                <input type="text" id="txtMsg" class="caixa">
+                <br>
+                <input type="button" value="Enviar Mensagem" class="enviar" onclick="btnSendClick()" href="cadastro.html">
+                <input type="reset" value="Limpar" class="limpar">
+                <br>
+                <br>
+                <a href="index.html">Voltar para Página Inicial</a>
+            </div>
+        </form>
+    </div>
 
-
-
-            <input type="submit" value="Enviar Mensagem" class="enviar">
-            <input type="reset" value="Limpar" class="limpar">
-<br>
-<br>
-            <a href="index.html">Voltar para Página Inicial</a>
-        </div>
-    </form>
-</div>
-    
     <footer>
-        <p>&copy; Todos os direitos reservados aos alunos: Igor, Marcel, Samuel e Augusto</p>
+        <p>&copy; Todos os direitos reservados aos alunos: Igor, Marcel, Samuel, Augusto e Gabriel</p>
     </footer>
+
     <script>
-        const txtname = document.getElementById('txtname')
-        const txtSobre = document.getElementById('txtSobre')
-        const txtEmail = document.getElementById('txtEmail')
-        const txtNumber = document.getElementById('txtNumber')
-        const txtMsg = document.getElementById('txtMsg')
+        const txtname = document.getElementById('txtname');
+        const txtSobre = document.getElementById('txtSobre');
+        const txtEmail = document.getElementById('txtEmail');
+        const txtNumber = document.getElementById('txtNumber');
+        const txtMsg = document.getElementById('txtMsg');
+        const form = document.querySelector('.formulario');
 
         function btnSendClick(){
-                if (txtname.value==""){
-                        alert('Preenchimento obrigatório: Nome')
-                        txtname.focus()
-                }
+            if (txtname.value === ""){
+                alert('Preenchimento obrigatório: Nome');
+                txtname.focus();
+                return;
+            }    
+            else if (!isEmail(txtEmail.value)){
+                alert('Email Inválido');
+                txtEmail.value = "";
+                txtEmail.focus();
+                return;
+            }
+            else if (txtSobre.value === ""){
+                alert("Preenchimento obrigatório: Sobrenome");
+                txtSobre.focus();
+                return;
+            }
+            else if (txtNumber.value === ""){
+                alert("Preenchimento obrigatório: Telefone");
+                txtNumber.focus();
+                return;
+            }
+            else if (!isTelephone(txtNumber.value)){
+                alert("Número de telefone inválido");
+                txtNumber.focus();
+                return;
+            }
+            else {
+                alert("Formulário enviado com sucesso!")
+                
+                
+            }
+        }
+
+        function isTelephone(telephone){
+            // Regex para telefone com DDD (formato: (xx)xxxxx-xxxx)
+            const re = /^\(\d{2}\)\d{5}-\d{4}$/;
+            return re.test(telephone);
+        }
+
+        function isEmail(text){
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(text);
+        }
+
+        function formatPhoneNumber() {
+            let phoneNumber = txtNumber.value;
+            // Remove todos os caracteres que não sejam dígitos
+            phoneNumber = phoneNumber.replace(/\D/g, '');
+            
+            // Formata o número de telefone
+            if (phoneNumber.length > 2) {
+                phoneNumber = `(${phoneNumber.slice(0, 2)})${phoneNumber.slice(2)}`;
+            }
+            if (phoneNumber.length > 9) {
+                phoneNumber = `${phoneNumber.slice(0, 9)}-${phoneNumber.slice(9)}`;
+            }
+            txtNumber.value = phoneNumber;
         }
     </script>
 </body>
