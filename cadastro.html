@@ -16,23 +16,23 @@
         <div class="login">
             <label for="" class="nomes">Nome</label>
 <br>
-        <input type="text" placeholder="Digite seu nome..." class="nome">
+        <input type="text" placeholder="Digite seu nome..." class="nome" id="txtname">
 <br>
 <br>
 
         <label for="" class="sobrenome">Sobrenome</label>
 <br>
-        <input type="text"id="sobrenome" placeholder="Digite seu sobrenome..." class="sobrenome">
+        <input type="text" id="txtSobre" placeholder="Digite seu sobrenome..." class="sobrenome">
 <br>
 <br>
         <label for="">Email</label>
 <br>
-        <input type="email" nome="email" placeholder="Digite o seu email..." class="email">
+        <input type="email" id="txtEmail" placeholder="Digite o seu email..." class="email">
 <br>
 <br>
         <label for="">Telefone</label>
 <br>
-        <input type="number" placeholder="Digite seu Número de Telefone..." class="numero">
+        <input type="number" id="txtNumber" placeholder="Digite seu Número de Telefone..." class="numero">
 <br>
 <br>
         <label for="">Qual é a sua identidade de gênero?</label>
@@ -59,7 +59,7 @@
                     <option value="sugestao">Sugestão</option>
             </select>
 <br>
-            <input type="text" id="msg" class="caixa">
+            <input type="text" id="txtMsg" class="caixa">
 <br>
 
 
@@ -76,5 +76,19 @@
     <footer>
         <p>&copy; Todos os direitos reservados aos alunos: Igor, Marcel, Samuel e Augusto</p>
     </footer>
+    <script>
+        const txtname = document.getElementById('txtname')
+        const txtSobre = document.getElementById('txtSobre')
+        const txtEmail = document.getElementById('txtEmail')
+        const txtNumber = document.getElementById('txtNumber')
+        const txtMsg = document.getElementById('txtMsg')
+
+        function btnSendClick(){
+                if (txtname.value==""){
+                        alert('Preenchimento obrigatório: Nome')
+                        txtname.focus()
+                }
+        }
+    </script>
 </body>
 </html>
