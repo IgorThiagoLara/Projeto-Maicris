@@ -74,11 +74,18 @@
         const form = document.querySelector('.formulario');
 
         function btnSendClick(){
-            if (txtname.value === ""){
-                alert('Preenchimento obrigatório: Nome');
+            if (!isName(txtname.value)){
+                alert('Aviso: Sobrenome inválido. Por favor, insira no mínimo de 5 e no máximo de 10 caracteres alfabéticos, sem utilizar números.');
+                txtname.value="";
                 txtname.focus();
                 return;
             }    
+            else if (!isSobre(txtSobre.value)){
+                alert('Aviso: Sobrenome inválido. Por favor, insira apenas caracteres alfabéticos, sem utilizar números.        ')
+                txtSobre.value="";
+                txtSobre.focus();
+                return;
+            }
             else if (!isEmail(txtEmail.value)){
                 alert('Email Inválido');
                 txtEmail.value = "";
@@ -105,6 +112,16 @@
                 
                 
             }
+        }
+        function isName(name){
+                const re = /^[a-zA-Z]{5,10}$/;
+                return re.test(name);
+
+        }
+
+        function isSobre(sobrenome){
+                const re = /^[a-zA-Z]+$/; // apenas letras, sem incluir um limite de letras
+                return re.test(sobrenome); 
         }
 
         function isTelephone(telephone){
